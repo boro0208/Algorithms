@@ -1,27 +1,35 @@
 package com.company.sortalgorithms;
 
-public class BubbleSort {
+public class SelectionSort {
     private int[] array;
 
-    public BubbleSort(int[] array) {
+    public SelectionSort(int[] array) {
         this.array = array;
     }
 
     public void sortAsc(){
         for (int i = this.array.length -1; i > 0; i--){
-            for(int a = 0; a < i; a++){
-                if (this.array[a] >this.array[a+1])
-                    swap(this.array, a, a+1);
+            int largest = 0;
+            for(int a = 0; a <= i; a++) {
+                if (this.array[a] > this.array[largest]) {
+                    largest = a;
+                }
             }
+
+            swap(this.array, largest, i);
         }
     }
 
     public void sortDesc(){
         for (int i = this.array.length -1; i > 0; i--){
-            for(int a = 0; a < i; a++){
-                if (this.array[a] < this.array[a+1])
-                    swap(this.array, a, a+1);
+            int smallest = 0;
+            for(int a = 0; a <= i; a++) {
+                if (this.array[a] < this.array[smallest]) {
+                    smallest = a;
+                }
             }
+
+            swap(this.array, smallest, i);
         }
     }
 
