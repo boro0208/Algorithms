@@ -3,6 +3,7 @@ package com.company;
 import com.company.sortalgorithms.BubbleSort;
 import com.company.sortalgorithms.InsertionSort;
 import com.company.sortalgorithms.SelectionSort;
+import com.company.sortalgorithms.ShellSort;
 
 public class Main {
 
@@ -20,10 +21,16 @@ public class Main {
 //        selectionSort.sortDesc();
 //        selectionSort.printArray();
 
-        InsertionSort insertionSort = new InsertionSort(new int[]{9, 3, 6, 2, 7, 1,9});
-        insertionSort.sortAsc();
-        insertionSort.printArray();
-        insertionSort.sortDesc();
-        insertionSort.printArray();
+//        InsertionSort insertionSort = new InsertionSort(new int[]{9, 3, 6, 2, 7, 1,9});
+//        insertionSort.sortAsc();
+//        insertionSort.printArray();
+//        insertionSort.sortDesc();
+//        insertionSort.printArray();
+
+        ShellSort shellSort = new ShellSort(new int[]{9, 3, 6, 2, 7, 1,9});
+        shellSort.sortAsc();
+        shellSort.printArray();
+        shellSort.sortDesc();
+        shellSort.printArray();
     }
 }
