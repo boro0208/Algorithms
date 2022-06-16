@@ -1,9 +1,6 @@
 package com.company;
 
-import com.company.sortalgorithms.BubbleSort;
-import com.company.sortalgorithms.InsertionSort;
-import com.company.sortalgorithms.SelectionSort;
-import com.company.sortalgorithms.ShellSort;
+import com.company.sortalgorithms.*;
 
 public class Main {
 
@@ -27,10 +24,15 @@ public class Main {
 //        insertionSort.sortDesc();
 //        insertionSort.printArray();
 
-        ShellSort shellSort = new ShellSort(new int[]{9, 3, 6, 2, 7, 1,9});
-        shellSort.sortAsc();
-        shellSort.printArray();
-        shellSort.sortDesc();
-        shellSort.printArray();
+//        ShellSort shellSort = new ShellSort(new int[]{9, 3, 6, 2, 7, 1,9});
+//        shellSort.sortAsc();
+//        shellSort.printArray();
+//        shellSort.sortDesc();
+//        shellSort.printArray();
+
+        int[] array = {9, 3, 6, 2, 7, 1,9};
+        MergeSort mergeSort = new MergeSort();
+        mergeSort.sortAsc(array, 0 , array.length);
+        mergeSort.printArray();
     }
 }
