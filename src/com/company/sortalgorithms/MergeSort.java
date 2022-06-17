@@ -16,6 +16,7 @@ public class MergeSort {
         sortAsc(array, mid, end);
 
         merge(array, start, mid, end);
+        this.array = array;
     }
 
     private void merge(int[] array, int start, int mid, int end){
@@ -36,7 +37,6 @@ public class MergeSort {
         System.arraycopy(array, i, array, start + tempIndex, mid - i);
         System.arraycopy(temp, 0, array, start, tempIndex);
 
-        this.array = array;
     }
 
     public void printArray(){
